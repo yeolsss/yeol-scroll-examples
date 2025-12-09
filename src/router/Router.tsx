@@ -6,6 +6,7 @@ import Loading from "../pages/Loading.tsx";
 // Lazy load components
 const App = lazy(() => import("../App.tsx"));
 const ScrollControlPage = lazy(() => import("../pages/ScrollSnapPage.tsx"));
+const SliceSliderPage = lazy(() => import("../pages/SliceSliderPage.tsx"));
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <ScrollControlPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/slice-slider",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <SliceSliderPage />
           </Suspense>
         ),
       },

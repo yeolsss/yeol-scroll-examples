@@ -7,6 +7,9 @@ const App = () => {
         <li>
           <NavLink to="/scroll-snap">ScrollSnapPage</NavLink>
         </li>
+        <li>
+          <NavLink to="/slice-slider">SliceSliderPage</NavLink>
+        </li>
       </ul>
     </section>
   );
