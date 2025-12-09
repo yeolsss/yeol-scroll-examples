@@ -5,6 +5,7 @@ import Loading from "../pages/Loading.tsx";
 
 // Lazy load components
 const App = lazy(() => import("../App.tsx"));
+const ScrollControlPage = lazy(() => import("../pages/ScrollSnapPage.tsx"));
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <App />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/scroll-snap",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ScrollControlPage />
           </Suspense>
         ),
       },
