@@ -7,6 +7,9 @@ import Loading from "../pages/Loading.tsx";
 const App = lazy(() => import("../App.tsx"));
 const ScrollControlPage = lazy(() => import("../pages/ScrollSnapPage.tsx"));
 const SliceSliderPage = lazy(() => import("../pages/SliceSliderPage.tsx"));
+const ParallaxScrollPage = lazy(
+  () => import("../pages/ParallaxScrollPage.tsx"),
+);
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +37,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <SliceSliderPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/parallax-scroll",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ParallaxScrollPage />
           </Suspense>
         ),
       },

@@ -25,6 +25,12 @@ const App = () => {
             title="Slice Slider"
             description="슬라이스 슬라이더 컴포넌트"
           />
+
+          <NavLinkCard
+            to={"/parallax-scroll"}
+            title={"ParallaxScrollPage"}
+            description={""}
+          />
         </nav>
       </div>
     </section>
